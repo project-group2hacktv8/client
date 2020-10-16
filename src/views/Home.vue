@@ -20,6 +20,9 @@
     </form>
     </div>
 
+    <div v-if="winCondition">You're winning</div>
+    <div v-else>You're losing</div>
+
     <div class="flex">
       <img src="../assets/rock.svg" alt="rock" class="rock">
       <img src="../assets/paper.svg" alt="paper" class="paper">
@@ -32,7 +35,12 @@
 // @ is an alias to /src
 
 export default {
-  name: 'Home'
+  name: 'Home',
+  data () {
+    return {
+      winCondition: ''
+    }
+  }
 }
 </script>
 
